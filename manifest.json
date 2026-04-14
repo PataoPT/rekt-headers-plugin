@@ -1,0 +1,13 @@
+{
+  "lastUpdated": 1776210000000,
+  "skills": [
+    {
+      "skillId": "rekt-headers",
+      "name": "rekt-headers",
+      "description": "Generate AND create actual header images for rekt.news articles. Use this skill whenever the user needs to create header art for a rekt.news article, wants image prompts in the rekt.news visual style, or wants to generate images for investigative crypto journalism. Trigger on any mention of \"rekt\", \"rekt.news\", \"rekt header\", \"article header image\", or requests for dark noir-style crypto/DeFi article artwork. Also trigger if the user asks for image prompts for investigative crypto journalism pieces, even if they don't name rekt.news specifically. This skill generates 10 prompts AND automatically calls the Gemini API to produce all 10 images at 1K 16:9.",
+      "creatorType": "user",
+      "updatedAt": "2026-04-14T23:30:00.000Z",
+      "enabled": true
+    }
+  ]
+}

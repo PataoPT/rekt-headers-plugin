@@ -1,0 +1,5 @@
+{
+  "name": "rekt-headers",
+  "version": "1.0.0",
+  "description": "Generate header images for rekt.news articles using AI image generation. Produces 10 B&W editorial art concepts per article via Gemini Pro Image."
+}
