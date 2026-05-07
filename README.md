@@ -90,6 +90,40 @@ rekt-headers-plugin/
   README.md                    — This file
 ```
 
+## Contributing / Updating the Skill
+
+The `skills/rekt-headers/SKILL.md` file is the brain of this plugin — it controls how Claude understands the rekt.news visual style and generates image prompts.
+
+**Workflow for any change:**
+
+```
+git checkout -b fix/describe-your-change
+# edit skills/rekt-headers/SKILL.md
+git push → open PR on GitHub → review → merge
+```
+
+Then on your local machine:
+
+```bash
+git pull          # post-merge hook runs deploy.sh automatically
+                  # restart Claude Desktop → done
+```
+
+**How the auto-deploy works:**
+- `deploy.sh` finds all Claude Desktop session cache copies of SKILL.md and overwrites them from the repo
+- The git `post-merge` hook calls `deploy.sh` automatically whenever `git pull` brings in changes to SKILL.md
+- No manual file copying needed
+
+**Manual deploy** (if the hook doesn't fire, or after a fresh clone):
+
+```bash
+./deploy.sh
+```
+
+**Never edit the session cache directly** (`~/Library/Application Support/Claude/local-agent-mode-sessions/...`). It will be overwritten on the next `git pull`. The repo is the source of truth.
+
+---
+
 ## Troubleshooting
 
 **nanobanana tools don't appear after restart**
